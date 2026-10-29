@@ -1,5 +1,5 @@
 """Модели базы данных."""
 
-from backend.models.student import Student
+from backend.models.models import Grade, Student, Subject, Teacher
 
-__all__ = ["Student"]
+__all__ = ["Grade", "Student", "Subject", "Teacher"]

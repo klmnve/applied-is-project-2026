@@ -1,9 +1,5 @@
-"""Базовая модель студента."""
+"""Совместимость с импортом Student из первой лабораторной работы."""
 
-from sqlmodel import Field, SQLModel
+from backend.models.models import Student
 
-
-class Student(SQLModel, table=True):
-    id: int | None = Field(default=None, primary_key=True)
-    full_name: str = Field(index=True)
-    group_name: str = Field(index=True)
+__all__ = ["Student"]

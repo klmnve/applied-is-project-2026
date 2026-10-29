@@ -5,12 +5,12 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
 from backend.api import router
-from backend.database import create_db_and_tables
+from backend.db import init_db
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    create_db_and_tables()
+    init_db()
     yield
 
 
